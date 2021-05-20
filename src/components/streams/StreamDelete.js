@@ -8,7 +8,7 @@ import { fetchStream, deleteStream } from "../../actions";
 const StreamDelete = ({ fetchStream, deleteStream, match, stream }) => {
   useEffect(() => {
     fetchStream(match.params.id);
-  }, []);
+  }, [fetchStream, match.params.id]);
 
   const actions = (
     <>
